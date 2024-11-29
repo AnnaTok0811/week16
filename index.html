@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Регистрация</title>
+  </head>
+  <body>
+    <!-- Поле ввода имени: обязательное поле, должно содержать только буквы и пробелы. Длина имени должна быть от 2 до 20 символов. Должно иметь атрибуты placeholder и required. -->
+    <main>
+      <div class="container">
+        <form class="registration" id="registration">
+          <h1 class="logo">Registration Form</h1>
+          
+<div>
+          <label for="username">
+            <input
+              type="text"
+              id="username"
+              minlength="2"
+              maxlength="20"
+              placeholder="username"
+              required
+            />
+          </div>
+
+            <!-- Поле ввода электронной почты: обязательное поле, должно быть в формате email (содержать символ '@' и доменное имя). Должно иметь атрибуты placeholder и required. -->
+
+            <div>
+            <input type="email" id="email" placeholder="email" required/>
+          </div>
+
+            <!-- Поле ввода возраста: обязательное поле. Должно иметь атрибуты placeholder и required. -->
+            <div>
+            <input type="number" id="age" min="18" max="100" id="numberAge" placeholder="age" required />
+          </div>
+
+            <!-- Поле выбора пола: представленное в виде radio buttons для выбора между мужчиной и женщиной -->
+            <div>
+            <fieldset>
+              <legend>Specify your gender:</legend>
+            
+              <div>
+                <input type="radio" id="woman" name="drone" value="woman" checked/>
+                <label for="woman">woman</label>
+              </div>
+            
+              <div>
+                <input type="radio" id="man" name="drone" value="man" />
+                <label for="man">man</label>
+              </div>
+          
+            </fieldset>
+          </div>
+
+            <!-- Поле выбора профессии: обязательное поле, представленное в виде выпадающего списка (select). Должно иметь атрибуты required и placeholder для выбора профессии. Варианты профессий: Врач, Программист, Учитель, Дизайнер, Инженер, Продавец, Другое. -->
+             
+            <div>
+            <label for="profession">Specify your profession:</label>
+            <select id="profession" name="profession" placeholder="profession" >
+              <option value="Doctor">Doctor</option>
+              <option value="Programmer">Programmer</option>
+              <option value="Teacher">Teacher</option>
+              <option value="Designer">Designer</option>
+              <option value="Engineer">Engineer</option>
+              <option value="Seller">Seller</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+            <!-- Поле ввода пароля: обязательное поле, должно быть не менее 8 символов длиной и содержать как минимум одну заглавную букву, одну строчную букву и одну цифру. Должно иметь атрибуты placeholder, required, minlength и pattern. -->
+            <div>
+          <label for="password">
+            <span>Password</span>
+           
+              <!-- pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/" -->
+              <!-- type="password" -->
+            <input
+            
+              id="password"
+              minlength="8"
+              required
+              placeholder="password"
+                          
+            />
+            <ul class="input-requirements">
+              <li>At least 8 characters long</li>
+              <li>Contains at least 1 number</li>
+              <li>Contains at least 1 lowercase letter</li>
+              <li>Contains at least 1 uppercase letter</li>
+              
+            </ul>
+          </label>
+        </div>
+
+          <!-- Поле checkbox, показывающее согласие пользователя с обработкой данных. Должно иметь атрибут required. -->
+          <div>
+          <fieldset>
+  <legend>Agree to data processing?</legend>
+  <input type="checkbox" id="checkboxApproval" name="yes" checked />
+  <label for="checkboxApproval">yes</label>
+          </fieldset>
+        </div>
+
+
+
+
+
+          <input type="submit" id="submitBtn" disabled />
+        </form>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
