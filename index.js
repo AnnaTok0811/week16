@@ -64,7 +64,7 @@ const setColor = () => {
   inputs.forEach(function (input) {
     input.addEventListener("focus", function () {
       input.style.outline = "none";
-      input.style.border = "2px solid #eb753fe6";
+      input.style.border = "4px solid #eb753fe6";
     });
     input.addEventListener("blur", function () {
       input.style.border = "";
